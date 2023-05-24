@@ -12,6 +12,7 @@
 
 - Clone the repository
 - run `yarn`
+- Copy .env.example to .env and fill in with your private key
 
 ## Introduccion
 
