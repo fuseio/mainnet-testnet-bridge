@@ -1,4 +1,4 @@
-const ROUTERS = require("../constants/uniswapRoutes.json")
+const ROUTERS = require("../constants/uniswapRouters.json")
 const POOLS = require("../constants/pools.json")
 const UniswapV2Router02Json = require("../test/abi/UniswapV2Router02.json")
 const erc20AbiJson = require("../test/abi/IERC20.json")

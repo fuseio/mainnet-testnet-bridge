@@ -1,5 +1,5 @@
 const POOLS = require("../constants/pools.json")
-const WETHS = require("../constants/weths.json")
+const WETHS = require("../constants/wrappedTokens.json")
 const ERC20Json = require("../test/abi/IERC20.json")
 const OFT_ARGS = require("../constants/oftArgs.json")
 

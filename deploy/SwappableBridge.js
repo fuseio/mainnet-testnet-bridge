@@ -1,4 +1,4 @@
-const ROUTERS = require("../constants/uniswapRoutes.json")
+const ROUTERS = require("../constants/uniswapRouters.json")
 const OFT_ARGS = require("../constants/oftArgs.json")
 const NATIVE_OFT_ARGS = require("../constants/nativeOftArgs.json")
 

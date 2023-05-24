@@ -1,15 +1,14 @@
 {
-	"ethereum": {
-		"name": "Native ETH",
-		"symbol": "ETH",
+	"fuse": {
+		"name": "Native FUSE",
+		"symbol": "FUSE",
 		"useMinAmount": false,
 		"contractName": "NativeOFT"
 	},
-	"goerli-mainnet": {
-		"name": "Native Goerli ETH",
-		"symbol": "GETH",
-		"minAmount": "1",
-		"useMinAmount": true,
-		"contractName": "MinSendAmountNativeOFT"
+	"gnosis": {
+		"name": "Native xDAI",
+		"symbol": "xDAI",
+		"useMinAmount": false,
+		"contractName": "NativeOFT"
 	}
 }

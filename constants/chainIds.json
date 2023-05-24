@@ -1,6 +1,4 @@
 {
-  "ethereum":       101,
-  "arbitrum":       110,
-  "optimism":       111,
-  "goerli-mainnet": 154
+  "fuse":           138,
+  "gnosis":         145
 }
