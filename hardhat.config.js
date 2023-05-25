@@ -78,11 +78,13 @@ module.exports = {
 
   networks: {
     fuse: {
+      symbol: "FUSE",
       url: "https://rpc.fuse.io",
       chainId: 122,
       accounts: [PRIVATE_KEY],
     },
     gnosis: {
+      symbol: "xDAI",
       url: "https://rpc.ankr.com/gnosis",
       chainId: 100,
       accounts: [PRIVATE_KEY]
