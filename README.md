@@ -31,6 +31,14 @@ The same idea works in reverse. In Gnosis, the **NativeOFT** contract is impleme
 
 ## Scripts
 
+- **info**: This script takes the parameter 'network'. It shows your current token balances.
+
+  Example:
+  ```css
+  npx hardhat --network fuse info
+  ```
+
+
 - **deposit**: This script takes the parameters 'network' and 'amount'. It wraps your native tokens and creates the NativeOFT token called **Native Fuse (FUSE)**.
 
   Example:
