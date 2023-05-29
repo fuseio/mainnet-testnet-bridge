@@ -10,7 +10,7 @@ module.exports = async function (taskArgs, hre) {
   try {
     let adapterParams = hre.ethers.utils.solidityPack(["uint16", "uint256"], [1, 200000]) // default adapterParams example
     let fees = await localContract.estimateSendFee(remoteChainId, owner.address, amount, false, adapterParams)
-    const increasedFee = fees[0].mul(10).div(9)
+    const increasedFee = fees[0].mul(5).div(4)
     const balance = await hre.ethers.provider.getBalance(owner.address)
 
     if (!balance.gt(increasedFee)) {
