@@ -67,16 +67,39 @@ The same idea works in reverse. In Gnosis, the **NativeOFT** contract is impleme
   npx hardhat --network fuse bridge --target-network gnosis --amount 0.1
   ```
 
-- **swapAndBridge**: takes the parameters 'network', 'amount', and 'targetNetwork'. Essentially, this script performs a swap with the OFT token, in this case, the **Mainnet Fuse (MFUSE)** token implemented on the Gnosis network. It swaps **WXDAI** for **MFUSE** and then sends the **MFUSE** tokens to the Fuse network. To execute this script, there must be liquidity available for the transaction. The 'amount' parameter represents the quantity of **MFUSE** tokens you want to receive. 
+- **swapAndBridge**: takes the parameters 'network', 'amount', and 'targetNetwork'. Essentially, this script performs a swap with the OFT token, in this case, the **Mainnet Fuse (MFUSE)** token implemented on the Gnosis network. It swaps **WXDAI** for **MFUSE** and then sends the **MFUSE** tokens to the Fuse network. To execute this script, there must be liquidity available for the transaction. The 'amount' parameter represents the quantity of native tokens you want to swap. 
+
 
   Example:
-  ```css
-  npx hardhat --network gnosis swapAndBridge --target-network fuse --amount 0.1
+  ```shell
+  npx hardhat --network gnosis swapAndBridge --target-network fuse --amount 0.05
+  ```
+
+- **addLiquidity**: this script adds liquidity to the pool based on the given networks. Take the **---eth-amount** parameter and call getTokenRatio, it automatically calculates the amount of token to add to the pool and liquidity is added.. 
+
+  Example:
+  ```shell
+  npx hardhat --network gnosis addLiquidity --target-network fuse --eth-amount 50
+  ```
+
+- **removeLiquidity**: this script remove liquidity to the pool based on the given networks.
+
+  Example:
+  ```shell
+  npx hardhat removeLiquidity --network gnosis --target-network fuse
+  ```
+
+- **tokenArbitrageAmount**: This returns the market price and the pool price and advises you a swap to balance the pool price, if you want to execute the transaction to balance the pool price you must pass the additional parameter **--swap yes**.
+
+  Example:
+  ```shell
+  npx hardhat tokenArbitrageAmount --network gnosis --target-network fuse
+  ```
+   ```shell
+  npx hardhat tokenArbitrageAmount --network gnosis --target-network fuse --swap yes
   ```
 
 
-
->NOTE: The scripts **swapAndBridge**, **addLiquidity**, and **removeLiquidity** are not functional. First, you need to create >liquidity pools and complete the addresses in **/constants/pools.json**.
 
 
 
