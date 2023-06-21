@@ -1,0 +1,5 @@
+{
+  "fuse": "https://api.diadata.org/v1/assetQuotation/Fuse/0x0000000000000000000000000000000000000000",
+  "gnosis": "https://api.diadata.org/v1/assetQuotation/Ethereum/0x6B175474E89094C44Da98b954EedeAC495271d0F",
+  "metis": "https://api.diadata.org/v1/assetQuotation/Metis/0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000"
+}

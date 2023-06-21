@@ -5,9 +5,24 @@ task("bridge", "bridges native tokens", require("./bridge"))
   .addParam("targetNetwork", "the destination chainId")
   .addParam("amount", "amount to bridge")
 
-task("addLiquidity", "adds Liquidity", require("./addLiquidity"))
-  .addParam("tokenAmount", "token amount to add")
+task("calculateTokenRatio", "calculate the token ratio between two tokens", require("./calculateTokenRatio"))
   .addParam("ethAmount", "ETH amount to add")
+  .addParam("targetNetwork", "the name destination chain")
+
+task("tokenArbitrageAmount", "calculate the token ratio between two tokens", require("./tokenArbitrageAmount"))
+  .addParam("targetNetwork", "the name destination chain")
+  .addOptionalParam("swap")
+
+task("addLiquidity", "adds Liquidity", require("./addLiquidity"))
+  .addParam("targetNetwork", "the name destination chain")
+  .addParam("ethAmount", "ETH amount to add")
+
+task("removeLiquidity", "removes Liquidity", require("./removeLiquidity"))
+  .addParam("targetNetwork", "the name destination chain")
+
+task("swap", "swap", require("./swap"))
+  .addParam("targetNetwork", "the name destination chain")
+
 
 task("swapAndBridge", "swaps and bridge", require("./swapAndBridge"))
   .addParam("targetNetwork", "the destination chainId")

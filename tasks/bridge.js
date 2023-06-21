@@ -27,7 +27,7 @@ module.exports = async function (taskArgs, hre) {
       owner.address,
       hre.ethers.constants.AddressZero,
       "0x",
-      { value: amount.add(total) }
+      { value: total }
     )
     await tx.wait()
     console.log(`Transaction tx: ${tx.hash}\n`)

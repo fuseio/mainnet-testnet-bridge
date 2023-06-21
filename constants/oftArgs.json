@@ -1,14 +1,32 @@
 {
 	"fuse": {
-		"name": "Mainnet xDAI",
-		"symbol": "MxDAI",
-		"useMinAmount": false,
-		"contractName": "OFT"
-	},
+    "gnosis": {
+      "name": "Mainnet xDAI",
+      "symbol": "MxDAI",
+      "useMinAmount": false,
+      "contractName": "GnosisOFT"
+    },
+    "metis": {
+      "name": "Mainnet METIS",
+      "symbol": "MMETIS",
+      "useMinAmount": false,
+      "contractName": "MetisOFT"
+    }
+  },
   "gnosis": {
-		"name": "Mainnet FUSE",
-		"symbol": "MFUSE",
-		"useMinAmount": false,
-		"contractName": "OFT"
-	}
+      "fuse": {
+      "name": "Mainnet FUSE",
+      "symbol": "MFUSE",
+      "useMinAmount": false,
+      "contractName": "FuseOFT"
+    }
+  },
+  "metis": {
+      "fuse": {
+      "name": "Mainnet FUSE",
+      "symbol": "MFUSE",
+      "useMinAmount": false,
+      "contractName": "FuseOFT"
+    }
+  }
 }
