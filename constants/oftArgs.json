@@ -15,18 +15,18 @@
   },
   "gnosis": {
       "fuse": {
-      "name": "Mainnet FUSE",
-      "symbol": "MFUSE",
-      "useMinAmount": false,
-      "contractName": "FuseOFT"
-    }
+        "name": "Mainnet FUSE",
+        "symbol": "MFUSE",
+        "useMinAmount": false,
+        "contractName": "FuseOFT"
+      }
   },
   "metis": {
       "fuse": {
-      "name": "Mainnet FUSE",
-      "symbol": "MFUSE",
-      "useMinAmount": false,
-      "contractName": "FuseOFT"
-    }
+        "name": "Mainnet FUSE",
+        "symbol": "MFUSE",
+        "useMinAmount": false,
+        "contractName": "FuseOFT"
+      }
   }
 }

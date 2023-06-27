@@ -88,6 +88,12 @@ module.exports = {
       url: "https://rpc.ankr.com/gnosis",
       chainId: 100,
       accounts: [PRIVATE_KEY]
+    },
+    metis: {
+      symbol: "METIS",
+      url: "https://andromeda.metis.io/?owner=1088",
+      chainId: 1088,
+      accounts: [PRIVATE_KEY]
     }
   }
 };

@@ -1,12 +1,12 @@
 {
 	"fuse": {
     "gnosis": "0xF57CBC399C4724d3cbbf31Ff6527302e1B83e512",
-    "metis": ""
+    "metis": "0x6c4e3a08099b0e349c5bc594Ef74DE721d696132"
   },
 	"gnosis": {
     "fuse": "0xcA5E11d4B8E76E77841096Ffe49eB56bB34F918D"
   },
   "metis": {
-    "fuse": ""
+    "fuse": "0x239AFBaAeef2951667dB88deAf26CbFf9c76C2A0"
   }
 }
