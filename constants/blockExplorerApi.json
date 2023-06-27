@@ -23,7 +23,7 @@
   "harmony": "",
   "intain": "",
   "klaytn": "",
-  "metis": "",
+  "metis": "https://andromeda-explorer.metis.io/api",
   "moonbeam": "https://api-moonbeam.moonscan.io/api",
   "swimmer": ""
 }

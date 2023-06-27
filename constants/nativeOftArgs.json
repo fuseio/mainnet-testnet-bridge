@@ -10,5 +10,11 @@
 		"symbol": "xDAI",
 		"useMinAmount": false,
 		"contractName": "NativeOFT"
-	}
+	},
+  "metis": {
+    "name": "Native METIS",
+    "symbol": "METIS",
+    "useMinAmount": false,
+    "contractName": "NativeOFT"
+  }
 }
