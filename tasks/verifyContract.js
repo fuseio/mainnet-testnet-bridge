@@ -72,7 +72,7 @@ function urlEncode(putObj) {
 
 function formatPutObj(baseContract, contractBuildInfo, contractDeployment, taskArgs, hre) {
     let putObj= {
-        apikey: process.env[`SCAN_API_KEY_${hre.network.name}`],
+      apikey: hre.network.name === 'metis' ? undefined : process.env[`SCAN_API_KEY_${hre.network.name}`],
         module: "contract",
         action: "verifysourcecode",
         sourceCode: JSON.stringify(contractBuildInfo["input"]),
