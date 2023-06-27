@@ -8,7 +8,7 @@ module.exports = async function ({ deployments, getNamedAccounts }) {
 
   const lzEndpointAddress = LZ_ENDPOINTS[hre.network.name]
   console.log(`[${hre.network.name}] Endpoint Address: ${lzEndpointAddress}`)
-  const oftArgs = OFT_ARGS[hre.network.name]
+  const oftArgs = OFT_ARGS[hre.network.name]["metis"]
   await deploy(oftArgs.contractName, {
     from: deployer,
     args: [oftArgs.name, oftArgs.symbol, lzEndpointAddress],
