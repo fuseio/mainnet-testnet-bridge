@@ -4,9 +4,7 @@
 
 ---
 
-# Mainnet to Testnet Bridge
-
-Mainnet to Testnet Bridge creates a market on both testnets and mainnets for native gas tokens.
+# Fuse to Gnosis Bridge
 
 ## Getting Started
 
@@ -14,15 +12,95 @@ Mainnet to Testnet Bridge creates a market on both testnets and mainnets for nat
 
 - Clone the repository
 - run `yarn`
+- Copy .env.example to .env and fill in with your private key
 
-### Test
+## Introduccion
 
-`yarn test`
+The Fuse to Gnosis Bridge involves two token contracts: **NativeOFT** and **OFT**.
 
-Run the full suite of unit tests.
+The **NativeOFT** contract represents the native token of the network where the contract is implemented, in this case Fuse. This token is used to wrap Fuse and create the **Native Fuse (FUSE)** token.
 
-### Coverage
+On the other hand, the **OFT** contract is implemented on the chain where we want to bridge, in this case Gnosis. This token represents **Native Fuse (FUSE)** in Gnosis and is called **Mainnet Fuse (MFUSE)**.
 
-`yarn coverage`
+To illustrate, let's consider having native tokens on Fuse. The process involves wrapping those tokens in the **NativeOFT** contract and calling the sendFrom function. As a result, you receive **OFT** tokens on the destination chain, in this case Gnosis.
 
-Get the coverage report.
+The main idea is to have a **WXDAI <> MFUSE** pool in Gnosis. Therefore, users can swap **WXDAI** for **MFUSE** and execute the sendFrom function on the **OFT** contract to receive **Native Fuse (FUSE)** tokens on Fuse.
+
+The same idea works in reverse. In Gnosis, the **NativeOFT** contract is implemented to represent **Native xDai (xDAI)**. The process is similar to **Native Fuse**, and once the transaction reaches Fuse from Gnosis, **MxDAI** tokens representing **Mainnet xDAI (MxDAI)** are received using the **OFT** contract.
+
+
+## Scripts
+
+- **info**: This script takes the parameter 'network'. It shows your current token balances.
+
+  Example:
+  ```css
+  npx hardhat --network fuse info
+  ```
+
+
+- **deposit**: This script takes the parameters 'network' and 'amount'. It wraps your native tokens and creates the NativeOFT token called **Native Fuse (FUSE)**.
+
+  Example:
+  ```css
+  npx hardhat --network fuse deposit --amount 0.1
+  ```
+
+- **withdraw**: This script takes the parameters 'network' and 'amount'. It unwraps your native tokens and burns the **Native Fuse (FUSE)** tokens.
+
+  Example:
+  ```css
+  npx hardhat --network fuse withdraw --amount 0.1
+  ```
+
+- **send**: This script takes the parameters 'network', 'amount', 'targetNetwork', and 'contract'. It basically sends NativeOFT or OFT tokens to the target chain.
+
+  Example:
+  ```css
+  npx hardhat --network fuse send --amount 0.01 --target-network gnosis --contract NativeOFT
+  ```
+
+- **bridge**: This script takes the parameters 'network', 'amount', and 'targetNetwork'. It combines the functionality of deposit and send into a single script.
+
+  Example:
+  ```css
+  npx hardhat --network fuse bridge --target-network gnosis --amount 0.1
+  ```
+
+- **swapAndBridge**: takes the parameters 'network', 'amount', and 'targetNetwork'. Essentially, this script performs a swap with the OFT token, in this case, the **Mainnet Fuse (MFUSE)** token implemented on the Gnosis network. It swaps **WXDAI** for **MFUSE** and then sends the **MFUSE** tokens to the Fuse network. To execute this script, there must be liquidity available for the transaction. The 'amount' parameter represents the quantity of native tokens you want to swap. 
+
+
+  Example:
+  ```shell
+  npx hardhat --network gnosis swapAndBridge --target-network fuse --amount 0.05
+  ```
+
+- **addLiquidity**: this script adds liquidity to the pool based on the given networks. Take the **---eth-amount** parameter and call getTokenRatio, it automatically calculates the amount of token to add to the pool and liquidity is added.. 
+
+  Example:
+  ```shell
+  npx hardhat --network gnosis addLiquidity --target-network fuse --eth-amount 50
+  ```
+
+- **removeLiquidity**: this script remove liquidity to the pool based on the given networks.
+
+  Example:
+  ```shell
+  npx hardhat removeLiquidity --network gnosis --target-network fuse
+  ```
+
+- **tokenArbitrageAmount**: This returns the market price and the pool price and advises you a swap to balance the pool price, if you want to execute the transaction to balance the pool price you must pass the additional parameter **--swap yes**.
+
+  Example:
+  ```shell
+  npx hardhat tokenArbitrageAmount --network gnosis --target-network fuse
+  ```
+   ```shell
+  npx hardhat tokenArbitrageAmount --network gnosis --target-network fuse --swap yes
+  ```
+
+
+
+
+
+

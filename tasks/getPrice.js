@@ -1,5 +1,5 @@
-const ROUTERS = require("../constants/uniswapRoutes.json")
-const WETHS = require("../constants/weths.json")
+const ROUTERS = require("../constants/uniswapRouters.json")
+const WETHS = require("../constants/wrappedTokens.json")
 const OFT_ARGS = require("../constants/oftArgs.json")
 
 const routerAbi = [
