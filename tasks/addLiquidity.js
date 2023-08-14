@@ -59,8 +59,8 @@ module.exports = async function (taskArgs, hre) {
   const block = await ethers.provider.getBlock(blockNumber)
   const deadline = block.timestamp + 5 * 60 // 5 minutes from the current time
 
-  const ethAmountMin = ethAmount.sub(ethAmount.div(100).mul(2))
-  const oftAmountMin = oftAmount.sub(oftAmount.div(100).mul(2))
+  const ethAmountMin = ethAmount.sub(ethAmount.div(100).mul(5))
+  const oftAmountMin = oftAmount.sub(oftAmount.div(100).mul(5))
 
 
   console.log('Calling add liquidity..');
