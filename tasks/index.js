@@ -9,7 +9,7 @@ task("calculateTokenRatio", "calculate the token ratio between two tokens", requ
   .addParam("ethAmount", "ETH amount to add")
   .addParam("targetNetwork", "the name destination chain")
 
-task("tokenArbitrageAmount", "calculate the token ratio between two tokens", require("./tokenArbitrageAmount"))
+task("tokenArbitrageAmount", "calculate the token arbitrage amount", require("./tokenArbitrageAmount"))
   .addParam("targetNetwork", "the name destination chain")
   .addOptionalParam("swap")
 
@@ -37,6 +37,8 @@ task("withdraw", "unwrap your native token", require("./withdraw"))
 task("getPrice", "info", require("./getPrice"))
 
 task("info", "info", require("./info"))
+  .addParam("targetNetwork", "the name destination chain")
+
 
 task("getSigners", "show the signers of the current mnemonic", require("./getSigners"))
   .addOptionalParam("n", "how many to show", 3, types.int)
