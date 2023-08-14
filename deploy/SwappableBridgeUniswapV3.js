@@ -1,5 +1,5 @@
-const ROUTERS = require("../constants/swapRouters.json")
-const WETHS = require("../constants/weths.json")
+const ROUTERS = require("../constants/uniswapRouters.json")
+const WETHS = require("../constants/wrappedTokens.json")
 
 module.exports = async function ({ deployments, getNamedAccounts }) {
 	const { deploy } = deployments
@@ -7,7 +7,7 @@ module.exports = async function ({ deployments, getNamedAccounts }) {
 	console.log(`Deployer Address: ${deployer}`)
 
 	const routerAddress = ROUTERS[hre.network.name]
-	console.log(`[${hre.network.name}] Uniswap V3 SwapRouter Address: ${routerAddress}`)
+	console.log(`[${hre.network.name}] Uniswap SwapRouter Address: ${routerAddress}`)
 
 	const wethAddress = WETHS[hre.network.name]
 	console.log(`[${hre.network.name}] WETH Address: ${wethAddress}`)

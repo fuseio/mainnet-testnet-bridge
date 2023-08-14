@@ -1,27 +1,32 @@
 {
-	"ethereum": {
-		"name": "Goerli ETH",
-		"symbol": "GETH",
-		"useMinAmount": false,
-		"contractName": "OFT"
-	},
-	"arbitrum": {
-		"name": "Goerli ETH",
-		"symbol": "GETH",
-		"useMinAmount": false,
-		"contractName": "OFT"
-	},
-	"optimism": {
-		"name": "Goerli ETH",
-		"symbol": "GETH",
-		"useMinAmount": false,
-		"contractName": "OFT"
-	},
-	"goerli-mainnet": {
-		"name": "Mainnet ETH",
-		"symbol": "METH",
-		"minAmount": "0.0001",
-		"useMinAmount": true,
-		"contractName": "MinSendAmountOFT"
-	}	
+	"fuse": {
+    "gnosis": {
+      "name": "Mainnet xDAI",
+      "symbol": "MxDAI",
+      "useMinAmount": false,
+      "contractName": "GnosisOFT"
+    },
+    "metis": {
+      "name": "Mainnet METIS",
+      "symbol": "MMETIS",
+      "useMinAmount": false,
+      "contractName": "MetisOFT"
+    }
+  },
+  "gnosis": {
+      "fuse": {
+        "name": "Mainnet FUSE",
+        "symbol": "MFUSE",
+        "useMinAmount": false,
+        "contractName": "FuseOFT"
+      }
+  },
+  "metis": {
+      "fuse": {
+        "name": "Mainnet FUSE",
+        "symbol": "MFUSE",
+        "useMinAmount": false,
+        "contractName": "FuseOFT"
+      }
+  }
 }
